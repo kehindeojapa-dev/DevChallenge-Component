@@ -1,0 +1,22 @@
+@use "../utils" as util;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  //   list-style: none;
+  //   overflow-x: hidden;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: red;
+  max-width: 1440px;
+  margin-inline: auto;
+}
