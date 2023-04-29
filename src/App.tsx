@@ -1,10 +1,16 @@
-import "./App.css";
+import "./App.scss";
 import Button from "./components/Button/Button";
 
 function App() {
   return (
     <>
-      <Button>Button</Button>
+      <Button
+        size="lg"
+        text="Login"
+        // variant="outline"
+        color="danger"
+        endIcon="facebook"
+      />
     </>
   );
 }

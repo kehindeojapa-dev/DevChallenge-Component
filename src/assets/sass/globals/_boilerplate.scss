@@ -1,4 +1,4 @@
-@use "../utils" as util;
+@use "variables";
 
 html {
   box-sizing: border-box;
@@ -16,7 +16,10 @@ html {
 }
 
 body {
-  background-color: red;
+  // background-color: variables.$primary;
   max-width: 1440px;
+  min-height: 100vh;
   margin-inline: auto;
+  display: grid;
+  place-items: center;
 }

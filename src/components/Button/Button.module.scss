@@ -1,9 +1,221 @@
+// @use "../../../../../assets/sass/globals";
+@use "../../assets/sass/globals/variables" as var;
+@use "../../assets/sass/globals/typography" as font;
+
+// Default
 .Button {
-  background-color: red;
+  background-color: var.$default;
+  border: none;
+  padding-block: 8px;
+  padding-inline: 16px;
+  border-radius: var.$buttonButtonRadius;
+  font-family: font.$fontFamily;
+  font-weight: font.$fontWeight;
+  color: var.$textDefault;
+  box-shadow: var.$defaultShadow;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  position: relative;
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    background-color: var.$defaultActive;
+    cursor: pointer;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var.$default;
+    border-radius: 6px;
+    z-index: -2;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var.$defaultActive;
+    transition: all 0.3s ease-out;
+    border-radius: 6px;
+    z-index: -1;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
 }
-.Button:hover {
-  background-color: purple;
+
+// Colors
+.ColorPrimary {
+  border: none;
+  background-color: var.$primary;
+  color: var.$textWhite;
+  box-shadow: var.$primaryShadow;
+
+  &:hover,
+  &:focus {
+    background-color: var.$primaryActive;
+  }
+
+  &:after {
+    background-color: var.$primary;
+  }
+  &:before {
+    background-color: var.$primaryActive;
+  }
 }
-.Button:focus {
-  background-color: yellow;
+.ColorSecondary {
+  border: none;
+  background-color: var.$secondary;
+  color: var.$textWhite;
+  box-shadow: var.$secondaryShadow;
+
+  &:hover,
+  &:focus {
+    background-color: var.$secondaryActive;
+  }
+
+  &:after {
+    background-color: var.$secondary;
+  }
+  &:before {
+    background-color: var.$secondaryActive;
+  }
+}
+.ColorDanger {
+  border: none;
+  background-color: var.$danger;
+  color: var.$textWhite;
+  box-shadow: var.$dangerShadow;
+
+  &:hover,
+  &:focus {
+    background-color: var.$dangerActive;
+  }
+
+  &:after {
+    background-color: var.$danger;
+  }
+  &:before {
+    background-color: var.$dangerActive;
+  }
+}
+.ColorDefault {
+  border: none;
+  background-color: var.$default;
+  color: var.$textDefault;
+  box-shadow: var.$defaultShadow;
+
+  &:hover,
+  &:focus {
+    background-color: var.$defaultActive;
+  }
+  &:after {
+    background-color: var.$default;
+  }
+  &:before {
+    background-color: var.$defaultActive;
+  }
+}
+
+// Variant
+.VariantOutline {
+  border: 1px solid var.$outline;
+  background-color: var.$whiteBg;
+  color: var.$outline;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    background-color: var.$outlineActive;
+  }
+
+  &:after {
+    background-color: var.$whiteBg;
+  }
+  &:before {
+    background-color: var.$outlineActive;
+  }
+}
+
+.VariantText {
+  border: none;
+  background-color: var.$whiteBg;
+  color: var.$outline;
+  box-shadow: none;
+  padding-inline: 0px;
+
+  &:hover,
+  &:focus {
+    background-color: var.$outlineActive;
+    color: var.$outline;
+    box-shadow: none;
+    padding-block: 8px;
+    padding-inline: 16px;
+  }
+  &:after {
+    background-color: var.$whiteBg;
+  }
+  &:before {
+    background-color: var.$outlineActive;
+  }
+}
+
+// Size
+.SizeSmall {
+  padding-inline: 12px;
+  padding-block: 6px;
+}
+.SizeMedium {
+  padding-inline: 16px;
+  padding-block: 8px;
+}
+.SizeLarge {
+  padding-inline: 22px;
+  padding-block: 11px;
+}
+.SizeExtraLarge {
+  padding-inline: 28px;
+  padding-block: 14px;
+}
+
+// Icon
+.Icon {
+  font-size: 19px;
+}
+
+// Disable
+.Disabled {
+  color: var.$textDisabled;
+  background-color: var.$disabled;
+  box-shadow: none;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: var.$disabled;
+    cursor: not-allowed;
+  }
+  &:after {
+    background-color: var.$disabled;
+  }
+  &:before {
+    background-color: var.$disabled;
+  }
+}
+
+.DisableShadow {
+  box-shadow: none;
 }
