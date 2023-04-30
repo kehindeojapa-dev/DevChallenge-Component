@@ -2,7 +2,7 @@ import Button from "../components/Button/Button";
 
 const Buttons = () => {
   return (
-    <div className="mt-10 w-11/12 mx-auto">
+    <div className="mt-10">
       <h1 className="text-3xl text-gray-700 mb-10">Buttons</h1>
 
       {/* Level 1 */}

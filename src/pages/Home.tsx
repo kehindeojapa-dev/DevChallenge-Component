@@ -5,6 +5,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import Sidebar from "../layouts/Sidebar";
 import Buttons from "../layouts/Buttons";
 import Inputs from "../layouts/Inputs";
+import Footer from "../layouts/Footer";
 // import Pins from "./Pins";
 
 // import logo from "../assets/logo.png";
@@ -53,11 +54,14 @@ const Home = () => {
       </div>
 
       <div className="pb-2 flex-1 h-screen overflow-y-scroll" ref={scrollRef}>
-        <Routes>
-          <Route path={"/buttons"} element={<Buttons />} />
-          <Route path={"/inputs"} element={<Inputs />} />
-          <Route path={"/*"} element={<Buttons />} />
-        </Routes>
+        <div className="w-11/12 mx-auto">
+          <Routes>
+            <Route path={"/buttons"} element={<Buttons />} />
+            <Route path={"/inputs"} element={<Inputs />} />
+            <Route path={"/*"} element={<Buttons />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </section>
   );

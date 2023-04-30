@@ -12,7 +12,7 @@ type Props = {
 };
 
 const Sidebar: React.FC<Props> = ({ closeToggle }: Props) => {
-  console.log(closeToggle);
+  //   console.log(closeToggle);
   const handleCloseSidebar = () => {
     if (closeToggle) closeToggle(false);
   };
