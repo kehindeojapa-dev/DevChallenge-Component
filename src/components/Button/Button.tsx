@@ -28,7 +28,7 @@ interface ButtonProps {
   /**
    * Button Text Content
    */
-  text: string;
+  text?: string;
 
   /**
    * Button Function on Click
@@ -39,6 +39,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   size = "sm",
   color = "default",
+  text = "Default",
   ...props
 }: ButtonProps) => {
   const classNames = cn(styles.Button, {
@@ -54,6 +55,7 @@ const Button: React.FC<ButtonProps> = ({
     [styles.ColorSecondary]: color == "secondary",
     [styles.ColorDanger]: color == "danger",
     [styles.Disabled]: props.disabled,
+    [styles.VariantTextDisabled]: props.disabled && props.variant == "text",
   });
   const IconClassNames = cn("material-icons", styles.Icon);
   // console.log(props);
@@ -63,7 +65,7 @@ const Button: React.FC<ButtonProps> = ({
         <span className={IconClassNames}>{props.startIcon}</span>
       ) : null}
       {/* {children} */}
-      <span>{props.text}</span>
+      <span>{text}</span>
       {props.endIcon ? (
         <span className={IconClassNames}>{props.endIcon}</span>
       ) : null}

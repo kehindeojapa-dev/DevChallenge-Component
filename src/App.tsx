@@ -1,18 +1,12 @@
 import "./App.scss";
-import Button from "./components/Button/Button";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+// import Button from "./components/Button/Button";
+
+const router = createBrowserRouter([{ path: "/*", element: <Home /> }]);
 
 function App() {
-  return (
-    <>
-      <Button
-        size="lg"
-        text="Login"
-        // variant="outline"
-        color="danger"
-        endIcon="facebook"
-      />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

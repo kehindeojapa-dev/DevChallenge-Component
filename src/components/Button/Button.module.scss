@@ -13,10 +13,13 @@
   font-weight: font.$fontWeight;
   color: var.$textDefault;
   box-shadow: var.$defaultShadow;
+  font-size: 0px;
   font-size: 14px;
   line-height: 20px;
+  width: fit-content;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 9px;
   position: relative;
   z-index: 1;
@@ -155,15 +158,12 @@
   background-color: var.$whiteBg;
   color: var.$outline;
   box-shadow: none;
-  padding-inline: 0px;
 
   &:hover,
   &:focus {
     background-color: var.$outlineActive;
     color: var.$outline;
     box-shadow: none;
-    padding-block: 8px;
-    padding-inline: 16px;
   }
   &:after {
     background-color: var.$whiteBg;
@@ -213,6 +213,27 @@
   }
   &:before {
     background-color: var.$disabled;
+  }
+}
+// Disable
+.VariantTextDisabled {
+  color: var.$textDisabled;
+  background-color: var.$disabled;
+  background-color: red;
+  box-shadow: none;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: var.$textDisabled;
+    cursor: not-allowed;
+  }
+  &:after {
+    background-color: transparent;
+  }
+  &:before {
+    background-color: transparent;
   }
 }
 
