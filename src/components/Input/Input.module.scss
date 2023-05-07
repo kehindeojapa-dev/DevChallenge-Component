@@ -1,0 +1,153 @@
+@use "../../assets/sass/globals/variables" as var;
+@use "../../assets/sass/globals/typography" as font;
+
+$error: #d32f2f;
+$gray1: #333333;
+// $gray2: ;
+$gray3: #828282;
+$gray5: #e0e0e0;
+$gray6: #f2f2f2;
+$blue1: #2962ff;
+$borderRadius: 8px;
+$inputContainerPadding: 18px 12px;
+$inputContainerPaddingSmall: 10px 12px;
+$containerGap: 4px;
+$helperFontSize: 10px;
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: $containerGap;
+  width: fit-content;
+  font-family: font.$fontFamily;
+  font-weight: font.$fontWeight;
+
+  label {
+    font-size: 12px;
+    color: $gray1;
+  }
+  .InputContainer {
+    border: 1px solid $gray3;
+    display: flex;
+    gap: 15px;
+    border-radius: $borderRadius;
+    padding: $inputContainerPadding;
+    input,
+    textarea {
+      flex: 1;
+      outline: none;
+      border: none;
+      color: $gray1;
+      font-weight: 500;
+      resize: none;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: $gray3;
+    }
+  }
+  &:hover {
+    .InputContainer {
+      border: 1px solid $gray1;
+    }
+  }
+  &:has(input:focus),
+  &:has(textarea:focus) {
+    label {
+      color: $blue1;
+    }
+    .InputContainer {
+      border: 1px solid $blue1;
+    }
+  }
+  .HelperText {
+    font-size: $helperFontSize;
+    color: $gray3;
+    font-weight: 400;
+  }
+}
+
+.InputError {
+  label {
+    color: $error;
+  }
+  .InputContainer {
+    border: 1px solid $error;
+  }
+  .HelperText {
+    color: $error;
+  }
+  &:hover {
+    label {
+      color: $gray1;
+    }
+    .HelperText {
+      color: $gray1;
+    }
+  }
+  &:has(input:focus),
+  &:has(textarea:focus) {
+    label {
+      color: $error;
+    }
+    .InputContainer {
+      border: 1px solid $error;
+    }
+    .HelperText {
+      color: $error;
+    }
+  }
+  //   .InputContainer {
+  //     border: 1px solid red;
+  //     display: none;
+  //   }
+}
+
+.Disabled {
+  label {
+    color: $gray1;
+  }
+  .InputContainer {
+    border: 1px solid $gray5;
+    background: $gray6;
+    input,
+    textarea {
+      background: $gray6;
+    }
+  }
+  &:hover {
+    label {
+      color: $gray1;
+    }
+    cursor: not-allowed;
+    input,
+    textarea {
+      cursor: not-allowed;
+    }
+    .InputContainer {
+      border-color: $gray5;
+    }
+  }
+  &:has(input:focus),
+  &:has(textarea:focus) {
+    label {
+      color: $gray1;
+    }
+    .InputContainer {
+      border: 1px solid $gray5;
+    }
+  }
+}
+
+.Icon {
+  color: $gray3;
+}
+
+.SmallSize {
+  .InputContainer {
+    padding: $inputContainerPaddingSmall;
+  }
+}
+.FullWidth {
+  width: 100%;
+}

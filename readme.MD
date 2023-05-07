@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/kehindeojapa-dev/DevChallenge-Component}">
+    <a href="https://github.com/kehindeojapa-dev/DevChallenge-Component">
       Solution
     </a>
     <span> | </span>
@@ -30,18 +30,18 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-  - [Built With](#built-with)
+- [Overview](#overview) - [Built With](#built-with)
 - [Features](#features)
 - [How to use](#how-to-use)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](./assets/buttons.png)
+
+![screenshot](./assets/inputs.png)
 
 <!-- Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
@@ -54,10 +54,10 @@
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [TypeScript](https://typescriptjs.org)
+- [React](https://react.dev/)
+- [TypeScript](https://typescriptlang.org)
 - [Tailwind](https://tailwindcss.com/)
-- [Sass](https://sass.org/)
+- [Sass](https://sass-lang.com/)
 - [StoryBook](https://storybook.js.org)
 
 ## Features
@@ -92,10 +92,10 @@ $ yarn storybook
 
 <!-- - [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
 - [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked) --> -->
+- [Marked - a markdown parser](https://github.com/chjj/marked) -->
 
 ## Contact
 
-- Website [your-website.com](https://kehindeojapa.netlify.app)
-- GitHub [@your-username](https://github.com/kehindeojapa-dev)
+- Website [kehindeojapa.netlify.app](https://kehindeojapa.netlify.app)
+- GitHub [@kehindeojapa-dev](https://github.com/kehindeojapa-dev)
 <!-- - Twitter [@your-twitter](https://{twitter.com/your-username}) -->
